@@ -8,7 +8,7 @@ global $timthumb,$kaya_readmore;
 $sidebar_layout=get_post_meta($post->ID,'kaya_pagesidebar',true); 
 //sidebar class
 $aside_class=($sidebar_layout== "leftsidebar" ) ?  'one_third' : 'one_third_last';
-$content_class="content_wide";
+$content_class="right_sidebar";
 ?>
 <div class="content">
 <?php
@@ -40,7 +40,7 @@ $content_class="content_wide";
 	</div>
             <!-- #post-## -->
     <?php endwhile; ?>
-	   <form method="post" action="sendEmail.php" name="contact-form" id="contact-form">	
+	   <form method="post" action="action-cotizador.php" name="contact-form" id="contact-form">
             <div id="main">
             <div id="response" /></div>
             <div class="one_third">
@@ -76,17 +76,33 @@ $content_class="content_wide";
 		</form>
     </div>
 <!--StartSidebar Section -->
-<?php if($sidebar_layout !="full") { ?>
 <div class="<?php echo $aside_class;?>">
-    <?php get_sidebar();?>
+
+    <div class="teaserbox ">
+        <div class="teaserboxicon">
+            <div class="dots_top"></div>
+            <p><a href="#"><img class="" src="http://www.dotrow.com/wp-content/themes/globex/timthumb.php?src=http://www.dotrow.com/wp-content/uploads/2013/07/webdesign_basic.fw_.png&amp;w=320&amp;h=&amp;zc=1 &amp; q=100"></a>
+            </p><div class="dots_bottom"></div>
+        </div>
+        <div class="teaser_content">
+            <h3><a href="#"><span>$1700.00</span> + iva</a></h3>
+            <ul class="globe">
+                <li>Hosting y dominio .com por 1 año</li>
+                <li>Diseño web original y exclusivo</li>
+                <li>4 secciones</li>
+                <li>10 imágenes</li>
+                <li>3 cuentas de correo</li>
+                <li>Alta en buscadores</li>
+                <li>Contador de visitas</li>
+            </ul>
+        </div>
+    </div>
+
 </div>
 <div class="clear"></div>
-<?php } ?>
 
 <div class="clear"></div>
 </div>
 
     <!--End content Section -->
 <?php get_footer(); ?>
-
-kdnksjndkj
